@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+  <style>
+    /* Basic styling for responsiveness */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .product-image {
+      max-width: 100%;
+      height: auto;
+    }
+    .cta-button {
+      display: block;
+      width: 200px;
+      margin: 20px auto;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    /* Add more styles as needed */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Product Information -->
+    <h1>Product Name</h1>
+    <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Price: $XX.XX</p>
+    <!-- Product Image -->
+    <img class="product-image" src="product_image.jpg" alt="Product Image">
+    <!-- Call to Action Button -->
+    <a href="#" class="cta-button">Add to Cart</a>
+    <!-- Navigation -->
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</body>
+</html>

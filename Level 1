@@ -1,0 +1,146 @@
+
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Our Pricing</h1>
+    </header>
+    <main>
+        <section class="pricing">
+            <div class="price-card">
+                <h2>Basic</h2>
+                <p class="price">$10/month</p>
+                <ul>
+                    <li>Feature 1</li>
+                    <li>Feature 2</li>
+                    <li>Feature 3</li>
+                </ul>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="price-card">
+                <h2>Pro</h2>
+                <p class="price">$20/month</p>
+                <ul>
+                    <li>Feature 1</li>
+                    <li>Feature 2</li>
+                    <li>Feature 3</li>
+                    <li>Feature 4</li>
+                </ul>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="price-card">
+                <h2>Premium</h2>
+                <p class="price">$30/month</p>
+                <ul>
+                    <li>Feature 1</li>
+                    <li>Feature 2</li>
+                    <li>Feature 3</li>
+                    <li>Feature 4</li>
+                    <li>Feature 5</li>
+                </ul>
+                <button class="buy-now">Buy Now</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Contact us for custom plans</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+And the corresponding CSS (styles.css):
+
+```css
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.pricing {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.price-card {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+}
+
+.price-card h2 {
+    color: #333;
+}
+
+.price-card p.price {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.price-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.price-card ul li {
+    margin-bottom: 5px;
+}
+
+.price-card button.buy-now {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.price-card button.buy-now:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+```
+
+And a simple JavaScript (script.js) for currency and unit customization:
+
+```javascript
+document.addEventListener("DOMContentLoaded", function() {
+    const prices = document.querySelectorAll(".price");
+    prices.forEach(price => {
+        let currentPrice = price.innerText;
+        currentPrice = currentPrice.replace("$", "€"); // Change currency symbol
+        currentPrice = currentPrice.replace("month", "year"); // Change unit
+        price.innerText = currentPrice;
+    });
+});
